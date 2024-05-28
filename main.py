@@ -181,7 +181,7 @@ class BlackjackView(discord.ui.View):
 
         if result == 1:
             update_user_balance(self.user_id, get_user_balance(self.user_id) + self.bet)
-        else:
+        elif result == 2:
             update_user_balance(self.user_id, get_user_balance(self.user_id) - self.bet)
 
 class MyClient(discord.Client):
